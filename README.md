@@ -36,8 +36,8 @@ UltraPseR::UpseR(input = tiny_sequences, format = "svm", note = "stdprot", modul
 ###  Pse-DiDNA
 
 ```{r eval=FALSE}
-miRNA_sequences <- system.file("extdata", "tiny-dna.fas", package = "UltraPseR")
-UltraPseR::UpseR(input = "./inst/exdata/tiny-dna.fas", format = "svm", note = "didna", module = "pse", property = "DD0033", w = "0.05", l = "3", t = "1")
+DNA_sequences <- system.file("extdata", "tiny-dna.fas", package = "UltraPseR")
+UltraPseR::UpseR(input = DNA_sequences, format = "svm", note = "didna", module = "pse", property = "DD0033", w = "0.05", l = "3", t = "1")
 ```
 
 ###  Explore proprety
