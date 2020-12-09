@@ -1,16 +1,4 @@
----
-output: github_document
----
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  fig.path = "man/figures/",
-  message = FALSE,
-  warning = FALSE
-)
-```
 #  UltraPseR: Wappers for UltraPse in R
 
 An R package for biological sequence representations 
@@ -48,8 +36,8 @@ UltraPseR::UpseR(input = tiny_sequences, format = "svm", note = "stdprot", modul
 ###  Pse-DiDNA
 
 ```{r eval=FALSE}
-miRNA_sequences <- system.file("extdata", "tiny-dna.fas", package = "UltraPseR")
-UltraPseR::UpseR(input = "./inst/exdata/tiny-dna.fas", format = "svm", note = "didna", module = "pse", property = "DD0033", w = "0.05", l = "3", t = "1")
+DNA_sequences <- system.file("extdata", "tiny-dna.fas", package = "UltraPseR")
+UltraPseR::UpseR(input = DNA_sequences, format = "svm", note = "didna", module = "pse", property = "DD0033", w = "0.05", l = "3", t = "1")
 ```
 
 ###  Explore proprety
