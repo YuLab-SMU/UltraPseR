@@ -103,7 +103,7 @@ char **UltraPse::LoadTextLines(const char *fn)
     if (!fh)
         return 0;
     char *r = new char[fs]{};
-    fread(r,sizeof(char),fs,fh);
+    //fread(r,sizeof(char),fs,fh);
     fclose(fh);
 
     int cnt_lines = 0;
