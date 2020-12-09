@@ -1,4 +1,3 @@
-
 #  UltraPseR: Wappers for UltraPse in R
 
 An R package for biological sequence representations 
@@ -11,7 +10,8 @@ An R package for biological sequence representations
 
 The development version from github:
 
-```{r eval=FALSE}
+
+```r
 if (!requireNamespace("devtools", quietly=TRUE))
     install.packages("devtools")
 devtools::install_github("nyzhoulang/UltraPseR")
@@ -21,28 +21,32 @@ devtools::install_github("nyzhoulang/UltraPseR")
 
 ###  Calculated Component
 
-```{r eval=FALSE}
+
+```r
 tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
 UltraPseR::UpseR(input = tiny_sequences, format = "svm", module = "comp", note = "stdprot")
 ```
 
 ###  Pse-Protein
 
-```{r eval=FALSE}
+
+```r
 tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
-UltraPseR::UpseR(input = tiny_sequences, format = "svm", note = "stdprot", module = "pse", property = "ZIMJ680105", w = "0.05", l = "10", t = "2")
+UltraPseR::UpseR(input = tiny_sequences, format = "svm", note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
 ```
 
 ###  Pse-DiDNA
 
-```{r eval=FALSE}
+
+```r
 DNA_sequences <- system.file("extdata", "tiny-dna.fas", package = "UltraPseR")
-UltraPseR::UpseR(input = DNA_sequences, format = "svm", note = "didna", module = "pse", property = "DD0033", w = "0.05", l = "3", t = "1")
+UltraPseR::UpseR(input = DNA_sequences, format = "svm", note = "didna", module = "pse", property = "DD0033", w = 0.05, l = 3, t = 1)
 ```
 
 ###  Explore proprety
-```{r eval=FALSE}
-  UltraPseR::availabel(note = "stdprot")
+
+```r
+  UltraPseR::availabel_prop(note = "stdprot")
 ```
 
 
