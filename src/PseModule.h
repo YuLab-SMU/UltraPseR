@@ -18,7 +18,7 @@
 
 #include "BioNotations.h"
 #include "PCProperty.h"
-#include <lua.hpp>
+//#include <lua.hpp>
 
 #ifndef PSEMODULE_H_INCLUDED
 #define PSEMODULE_H_INCLUDED
@@ -76,7 +76,7 @@ namespace UltraPse
     struct VMExtInterface
     {
         const char *VMFunction;
-        lua_CFunction CFPtr;
+        //lua_CFunction CFPtr;
     };
 };
 
