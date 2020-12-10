@@ -40,12 +40,12 @@ int runUpse(const char* input,
     r->SetOutputFormat(format);
     r->AddModule(module);
     r->SetNotationName(note);
-    if (module == "pes"){
-        r->AddProperty(property);
-        r->AddExtraPara(_cmd_omega_name, omega);
-        r->AddExtraPara(_cmd_lambda_name, lambda);
-        r->AddExtraPara(_cmd_subtype, type);
-    }
+    if (module = "pes"){
+    r->AddProperty(property);
+    r->AddExtraPara(_cmd_omega_name, omega);
+    r->AddExtraPara(_cmd_lambda_name, lambda);
+    r->AddExtraPara(_cmd_subtype, type);
+    };
 
     Operator *App = new Operator();
     App->SetTask(r);
