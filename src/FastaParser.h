@@ -25,15 +25,15 @@
 namespace UltraPse
 {
     //Fasta format lines parsed as FSM
-    enum FastaParserState {Ready, Start, CommentLine, SequenceLine, Terminate}; //枚举获悉状态
+    enum FastaParserState {Ready, Start, CommentLine, SequenceLine, Terminate}; 
     enum FastaParserSignal {Refresh, Keep, Release};
 
     class FastaParser
     {
         public:
-            FastaParser(BioNotations *b, BioProcessor *p); //拷贝构造函数
-            ~FastaParser(); //释放内存
-            FastaParserState GetState(); //声明枚举变量
+            FastaParser(BioNotations *b, BioProcessor *p); 
+            ~FastaParser(); 
+            FastaParserState GetState(); 
             void SetState(char s);
             void Transfer(char *Line);
             void Dispatch(char *Line);
