@@ -5,6 +5,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // runUpse
 int runUpse(const char* input, const char* format, const char* module, const char* note, const char* property, const char* omega, const char* lambda, const char* type);
 RcppExport SEXP _UltraPseR_runUpse(SEXP inputSEXP, SEXP formatSEXP, SEXP moduleSEXP, SEXP noteSEXP, SEXP propertySEXP, SEXP omegaSEXP, SEXP lambdaSEXP, SEXP typeSEXP) {

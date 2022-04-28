@@ -27,13 +27,13 @@ const char *_cmd_omega_name = "_cmd_omega";
 const char *_cmd_subtype = "_cmd_subtype";
 const char *_cmd_ktuple = "_cmd_ktuple";
 
-namespace UltraPse
+/*namespace UltraPse
 {
 
     char doc[] = "UltraPse -- An ultra-fast extensible software platform for biological sequence representations.";
     char args_doc[] = "";
 
-    /* The options we understand. */
+    
     struct argp_option options[] =
     {
         {"in", 'i',    "FILE",  0, "A FASTA format file for input. The comment line of a sequence in this file should be unique. If you do not specify an in-file, the program will try to read it from keyboard."},
@@ -55,8 +55,7 @@ namespace UltraPse
 
     error_t parse_opt (int key, char *arg, struct argp_state *state)
     {
-      /* Get the input argument from argp_parse, which we
-         know is a pointer to our arguments structure. */
+      
         PseTask *CurrentTask = (PseTask*)(state->input);
         switch (key)
         {
@@ -117,4 +116,4 @@ namespace UltraPse
         return r;
     }
 
-};
+};*/

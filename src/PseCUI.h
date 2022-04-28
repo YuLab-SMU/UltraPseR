@@ -23,7 +23,7 @@
     libargp.a
 **/
 
-#include <argp.h>
+//#include <argp.h>
 #include "PseTask.h"
 
 #ifndef PSECUI_H_INCLUDED
@@ -36,7 +36,7 @@ extern const char *_cmd_subtype;
 extern const char *_cmd_ktuple;
 
 
-namespace UltraPse
+/*namespace UltraPse
 {
     extern char doc[];
     extern char args_doc[];
@@ -45,6 +45,6 @@ namespace UltraPse
     error_t parse_opt (int key, char *arg, struct argp_state *state);
     extern struct argp argp;
     PseTask *ParseCUI(int argc, char *argv[]);
-}
+}*/
 
 #endif // PSECUI_H_INCLUDED

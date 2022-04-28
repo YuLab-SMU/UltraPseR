@@ -30,7 +30,7 @@
 #include <cstdlib>
 #include <cmath>
 #include <sys/stat.h>
-#include <dlfcn.h>
+//#include <dlfcn.h>
 
 #include "Config.h"
 
