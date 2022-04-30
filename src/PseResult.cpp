@@ -18,7 +18,9 @@
 
 #include "PseResult.h"
 #include <cstdio>
+#include <Rcpp.h>
 using namespace UltraPse;
+using namespace Rcpp;
 
 UltraPse::PseResult::PseResult(BioSequence *p)
 {
@@ -58,32 +60,32 @@ int UltraPse::PseResult::GetLength()
 
 void UltraPse::PseResult::DisplayCSV(FILE *fh)
 {
-    fprintf(fh, "%s", Assoc_Seq->GetID());
+    Rprintf("%s", Assoc_Seq->GetID());
     for (int i = 0 ; i < Length ; i ++)
     {
-        fprintf(fh, ", %.3f",PseSerial[i]);
+        Rprintf(", %.3f",PseSerial[i]);
     }
-    fprintf(fh, ", %s\n", Assoc_Seq->GetComment());
+    Rprintf(", %s\n", Assoc_Seq->GetComment());
 }
 
 void UltraPse::PseResult::DisplayTSV(FILE *fh)
 {
-    fprintf(fh, "%s", Assoc_Seq->GetID());
+    Rprintf("%s", Assoc_Seq->GetID());
     for (int i = 0 ; i < Length ; i ++)
     {
-        fprintf(fh, "\t%.3f",PseSerial[i]);
+        Rprintf("\t%.3f",PseSerial[i]);
     }
-    fprintf(fh, "\t%s\n", Assoc_Seq->GetComment());
+    Rprintf("\t%s\n", Assoc_Seq->GetComment());
 }
 
 void UltraPse::PseResult::DisplaySVM(FILE *fh)
 {
-    fprintf(fh, "%d ", 0);
+    Rprintf("%d ", 0);
     for (int i = 0; i < Length; i ++)
     {
-        fprintf(fh, " %d:%.3f", i + 1, PseSerial[i]);
+        Rprintf(" %d:%.3f", i + 1, PseSerial[i]);
     }
-    fprintf(fh, " # %s\n", Assoc_Seq->GetID());
+    Rprintf(" # %s\n", Assoc_Seq->GetID());
 }
 
 void UltraPse::DisplayCSV(FILE *fh, UltraPse::PseResult *r)

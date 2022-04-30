@@ -25,7 +25,7 @@ using namespace Rcpp;
 
 
 // [[Rcpp::export]]
-int runUpse(const char* input,
+void runUpse(const char* input,
 	        const char* format,
 	        const char* module,
 	        const char* note, 
@@ -54,7 +54,7 @@ int runUpse(const char* input,
     App->Execute();
     delete App;
     delete r;
-    return 0;
+    //return 0;
 }
 
 
@@ -73,5 +73,5 @@ int available_property(const char* note)
     App->Execute();
     delete App;
     delete r;
-    return 0;
+    //return 0;
 }

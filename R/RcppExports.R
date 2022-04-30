@@ -2,7 +2,7 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 runUpse <- function(input, format, module, note, property, omega, lambda, type) {
-    .Call('_UltraPseR_runUpse', PACKAGE = 'UltraPseR', input, format, module, note, property, omega, lambda, type)
+    invisible(.Call('_UltraPseR_runUpse', PACKAGE = 'UltraPseR', input, format, module, note, property, omega, lambda, type))
 }
 
 available_property <- function(note) {

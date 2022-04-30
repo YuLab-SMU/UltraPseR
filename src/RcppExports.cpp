@@ -11,10 +11,9 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // runUpse
-int runUpse(const char* input, const char* format, const char* module, const char* note, const char* property, const char* omega, const char* lambda, const char* type);
+void runUpse(const char* input, const char* format, const char* module, const char* note, const char* property, const char* omega, const char* lambda, const char* type);
 RcppExport SEXP _UltraPseR_runUpse(SEXP inputSEXP, SEXP formatSEXP, SEXP moduleSEXP, SEXP noteSEXP, SEXP propertySEXP, SEXP omegaSEXP, SEXP lambdaSEXP, SEXP typeSEXP) {
 BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const char* >::type input(inputSEXP);
     Rcpp::traits::input_parameter< const char* >::type format(formatSEXP);
@@ -24,8 +23,8 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< const char* >::type omega(omegaSEXP);
     Rcpp::traits::input_parameter< const char* >::type lambda(lambdaSEXP);
     Rcpp::traits::input_parameter< const char* >::type type(typeSEXP);
-    rcpp_result_gen = Rcpp::wrap(runUpse(input, format, module, note, property, omega, lambda, type));
-    return rcpp_result_gen;
+    runUpse(input, format, module, note, property, omega, lambda, type);
+    return R_NilValue;
 END_RCPP
 }
 // available_property
