@@ -39,7 +39,7 @@ void runUpse(const char* input,
     r->SetOutputFormat(format);
     r->AddModule(module);
     r->SetNotationName(note);
-    if (module = "pes"){
+    if ((module = "pes")){
         if (property.size() > 1){
             for (int i = 0 ; i < property.size() ; i ++){
                 r->AddProperty(property[i]);
