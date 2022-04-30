@@ -6,6 +6,6 @@ runUpse <- function(input, format, module, note, property, omega, lambda, type) 
 }
 
 available_property <- function(note) {
-    .Call('_UltraPseR_available_property', PACKAGE = 'UltraPseR', note)
+    invisible(.Call('_UltraPseR_available_property', PACKAGE = 'UltraPseR', note))
 }
 

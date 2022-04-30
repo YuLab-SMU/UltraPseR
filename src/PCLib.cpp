@@ -21,9 +21,11 @@
 #include "StdProt.h"
 #include "StdDNA.h"
 #include "StdRNA.h"
+#include <Rcpp.h>
 
 using namespace UltraPse;
 using namespace std;
+using namespace Rcpp;
 
 std::map<const char *, unsigned char *, StrKMC> UltraPse::PropertyLibRegistry
 (
@@ -112,8 +114,8 @@ void UltraPse::PCLibrary::ListProperty()
         PropertyIndex *t = static_cast<PropertyIndex*>(p.second);
         char *id = (char*)(IDBlock + t->id_offset);
         char *comment = (char*)(CommentBlock + t->comment_offset);
-        printf("%s\t%s\n",id,comment);
+        Rprintf("%s\t%s\n",id,comment);
         k ++;
     }
-    printf("Total number of properties : %d\n", k);
+    Rprintf("Total number of properties : %d\n", k);
 }

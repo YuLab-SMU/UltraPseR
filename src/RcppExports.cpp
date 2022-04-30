@@ -28,14 +28,13 @@ BEGIN_RCPP
 END_RCPP
 }
 // available_property
-int available_property(const char* note);
+void available_property(const char* note);
 RcppExport SEXP _UltraPseR_available_property(SEXP noteSEXP) {
 BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const char* >::type note(noteSEXP);
-    rcpp_result_gen = Rcpp::wrap(available_property(note));
-    return rcpp_result_gen;
+    available_property(note);
+    return R_NilValue;
 END_RCPP
 }
 

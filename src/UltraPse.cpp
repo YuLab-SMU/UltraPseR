@@ -59,7 +59,7 @@ void runUpse(const char* input,
 
 
 // [[Rcpp::export]]
-int available_property(const char* note)
+void available_property(const char* note)
 {
     const char* query = "prop";
 
