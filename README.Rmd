@@ -1,3 +1,11 @@
+---
+output: 
+  md_document:
+    variant: gfm
+html_preview: TRUE
+---
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 #  UltraPseR: Wappers for UltraPse in R
 
 A R package for biological sequence representations 
@@ -6,8 +14,8 @@ A R package for biological sequence representations
 
 ##  Install development vertion
 
-~~ **!!!NOTE: We have tested these codes on Ubuntu 18.04.2 LTS.** There is no guarantee that these codes can be compiled and executed on other platforms without modifications.(Currently cannot be installed in the **Win**) ~~
-now, `UltraPseR` support all platforms.
+~~!!!NOTE: We have tested these codes on Ubuntu 18.04.2 LTS. There is no guarantee that these codes can be compiled and executed on other platforms without modifications.(Currently cannot be installed in the **Win**)~~
+Now, `UltraPseR` support all platforms.
 
 
 The development version from github:
@@ -22,9 +30,14 @@ devtools::install_github("nyzhoulang/UltraPseR")
 
 ###  Calculated Component
 
-```{r }
+```{r message=FALSE}
+library(dplyr)
+```
+
+```{r}
 tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
-UltraPseR::UpseR(input = tiny_sequences, format = "csv", module = "comp", note = "stdprot")
+x <- UltraPseR::UpseR(input = tiny_sequences, format = "csv", module = "comp", note = "stdprot") %>% capture.output
+x
 ```
 
 ###  Pse-Protein
@@ -43,7 +56,7 @@ UltraPseR::UpseR(input = DNA_sequences, format = "tsv", note = "didna", module =
 
 ###  Explore proprety
 ```{r }
-UltraPseR::availabel_prop(note = "stdprot")
+UltraPseR::availabel_prop(note = "didna")
 ```
 
 
