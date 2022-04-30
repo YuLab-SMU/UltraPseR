@@ -1,7 +1,7 @@
 Package: UltraPseR
 Type: Package
 Title: An R package for biological sequence representations
-Version: 0.1.2
+Version: 0.1.3
 Author: c(person("Lang", "Zhou",      email = "nyzhoulang@163.com", role = "aut"))
 Maintainer:Lang Zhou <nyzhoulang@gmail.com>
 Description: UltraPseR is an R wrapper of UltraPse developed in C++.

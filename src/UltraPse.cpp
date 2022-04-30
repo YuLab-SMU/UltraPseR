@@ -19,7 +19,6 @@
 #include <Rcpp.h>
 #include "UltraPse.h"
 
-using namespace std;
 using namespace UltraPse;
 using namespace Rcpp;
 
@@ -29,7 +28,7 @@ void runUpse(const char* input,
 	        const char* format,
 	        const char* module,
 	        const char* note, 
-            const char* property,
+            Rcpp::StringVector property,
             const char* omega,
             const char* lambda,
             const char* type)
@@ -41,7 +40,13 @@ void runUpse(const char* input,
     r->AddModule(module);
     r->SetNotationName(note);
     if (module = "pes"){
-    r->AddProperty(property);
+        if (property.size() > 1){
+            for (int i = 0 ; i < property.size() ; i ++){
+                r->AddProperty(property[i]);
+            }
+        }else{
+            r->AddProperty(property[0]);
+        }
     r->AddExtraPara(_cmd_omega_name, omega);
     r->AddExtraPara(_cmd_lambda_name, lambda);
     r->AddExtraPara(_cmd_subtype, type);
