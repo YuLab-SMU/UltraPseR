@@ -12,6 +12,11 @@ availabel_prop(note = "stdprot")
 \description{
 get availabel property
 }
+\examples{
+ 
+availabel_prop(note = "didna")
+availabel_prop(note = "stdprot")
+}
 \author{
 Lang Zhou
 }

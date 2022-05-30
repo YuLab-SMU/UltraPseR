@@ -2,7 +2,7 @@
 
 # UltraPseR: Wappers for UltraPse in R
 
-A R package for biological sequence representations
+An R package for biological sequence representations
 
 -   [UltraPse](https://github.com/pufengdu/UltraPse) by
     [pudengdu](https://github.com/pufengdu)

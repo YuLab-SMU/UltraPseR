@@ -35,6 +35,10 @@ UpseR(
 \description{
 wappers UltraPse in R
 }
+\examples{
+tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
+UpseR(input = tiny_sequences, format = "svm", note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
+}
 \author{
 Lang Zhou
 }

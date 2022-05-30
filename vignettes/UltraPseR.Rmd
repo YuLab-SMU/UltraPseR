@@ -1,0 +1,47 @@
+---
+title: "UltrPseR"
+author: "Lang Zhou"
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+###  Calculated Component
+
+```{r message=FALSE}
+library(UltraPseR)
+library(dplyr)
+```
+
+```{r}
+tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
+x <- UpseR(input = tiny_sequences, format = "csv", module = "comp", note = "stdprot") %>% capture.output
+x
+```
+
+###  Pse-Protein
+
+```{r }
+tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
+UpseR(input = tiny_sequences, format = "svm", note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
+```
+
+###  Pse-DiDNA
+
+```{r }
+DNA_sequences <- system.file("extdata", "tiny-dna.fas", package = "UltraPseR")
+UpseR(input = DNA_sequences, format = "tsv", note = "didna", module = "pse", property = "DD0033", w = 0.05, l = 3, t = 1)
+```
+
+###  Explore proprety
+```{r}
+availabel_prop(note = "didna")
+availabel_prop(note = "stdprot")
+```
+

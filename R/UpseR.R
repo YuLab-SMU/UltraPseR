@@ -8,6 +8,9 @@
 #' @param l Lambda,a mode specific option. Lambda parameter in the pse module. This option can have user defined purpose.
 #' @param t Type, a mode specific option. Type parameter in the pse / cov module. This option can have user defined purpose.
 #' @author Lang Zhou
+#' @examples
+#' tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
+#' UpseR(input = tiny_sequences, format = "svm", note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
 #' @export
 
 UpseR <- function(input, format = "svm", module = "comp", note = "stdprot", property = "ZIMJ680105", w = 0.05, l = 10, t = 1){
@@ -25,6 +28,9 @@ UpseR <- function(input, format = "svm", module = "comp", note = "stdprot", prop
 #' @title get availabel property
 #' @param note Sequence definition types. There are four internal types.{stdprot|didna|dirna|tridna}) 
 #' @author Lang Zhou
+#' @examples  
+#' availabel_prop(note = "didna")
+#' availabel_prop(note = "stdprot")
 #' @export
 
 availabel_prop <- function(note = "stdprot"){
