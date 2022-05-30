@@ -6,7 +6,7 @@
 \usage{
 UpseR(
   input,
-  format = "svm",
+  format = "tsv",
   module = "comp",
   note = "stdprot",
   property = "ZIMJ680105",
@@ -32,12 +32,15 @@ UpseR(
 
 \item{t}{Type, a mode specific option. Type parameter in the pse / cov module. This option can have user defined purpose.}
 }
+\value{
+a list
+}
 \description{
 wappers UltraPse in R
 }
 \examples{
 tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
-UpseR(input = tiny_sequences, format = "svm", note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
+UpseR(input = tiny_sequences, format = "tsv", note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
 }
 \author{
 Lang Zhou

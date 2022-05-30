@@ -1,14 +1,17 @@
 Package: UltraPseR
 Type: Package
 Title: An R package for biological sequence representations
-Version: 0.1.4
-Author: c(person("Lang", "Zhou",      email = "nyzhoulang@163.com", role = "aut"))
+Version: 0.1.5
+Author: c(person("Lang", "Zhou",      email = "nyzhoulang@gmail.com",    role = c("aut", "cre")),
+          person("Guangchuang", "Yu", email = "guangchuangyu@gmail.com", role = c("aut", "ths"), comment = c(ORCID = "0000-0002-6485-8781")),
 Maintainer: Lang Zhou <nyzhoulang@gmail.com>
 Description: UltraPseR is an R wrapper of UltraPse developed in C++. An R package for biological sequence representations.
 License: GPL (>= 3) + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: Rcpp 
+Imports: 
+    Rcpp,
+    dplyr
 LinkingTo: Rcpp
 RoxygenNote: 7.1.2
 URL: https://github.com/YuLab-SMU/UltraPseR

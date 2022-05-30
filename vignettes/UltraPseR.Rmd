@@ -21,15 +21,15 @@ library(dplyr)
 
 ```{r}
 tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
-x <- UpseR(input = tiny_sequences, format = "csv", module = "comp", note = "stdprot") %>% capture.output
-x
+x <- UpseR(input = tiny_sequences, format = "tsv", module = "comp", note = "stdprot")
+
 ```
 
 ###  Pse-Protein
 
 ```{r }
 tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
-UpseR(input = tiny_sequences, format = "svm", note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
+UpseR(input = tiny_sequences, format = "tsv", note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
 ```
 
 ###  Pse-DiDNA
@@ -41,7 +41,7 @@ UpseR(input = DNA_sequences, format = "tsv", note = "didna", module = "pse", pro
 
 ###  Explore proprety
 ```{r}
-availabel_prop(note = "didna")
-availabel_prop(note = "stdprot")
+available_prop(note = "didna")
+available_prop(note = "stdprot")
 ```
 
