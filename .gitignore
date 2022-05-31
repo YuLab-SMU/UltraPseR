@@ -4,7 +4,6 @@ README.Rmd
 src/LICENSE
 .Rhistory
 UltraPseR.html
-Makefile
 # R stuff
 *.RData
 *.Rda
