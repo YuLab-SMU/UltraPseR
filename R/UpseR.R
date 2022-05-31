@@ -19,14 +19,18 @@ UpseR <- function(input, format = "tsv", module = "comp", note = "stdprot", prop
 	w <- as.character(w)
 	l <- as.character(l)
 	t <- as.character(t)
-    x <- runUpse(input = input, format = format, module = module, note = note, property = property, omega = w, lambda = l, type = t) %>% capture.output
+    x <- runUpse(input = input, format = format, module = module, note = note, property = property, omega = w, lambda = l, type = t) %>% utils::capture.output()
     
     if( format == "tsv") {
-        lapply(seq(length(x)), function(i) {
-            split_x <- strsplit(x[i], "\t") %>% unlist
-            seq_vector <- head(split_x,-1) %>% tail(-1) %>% as.numeric
-            return(seq_vector)
-        }) 
+        #lapply(seq(length(x)), function(i) {
+        #    split_x <- strsplit(x[i], "\t") %>% unlist
+        #    seq_vector <- head(split_x,-1) %>% tail(-1) %>% as.numeric
+        #    return(seq_vector)
+        #})
+        x <- paste0(x, collapse="")
+        x <- gsub('\\\t\\(null\\)', "\n", x)
+        x <- utils::read.table(text=x, sep='\t', row.names = 1)
+        return(x)
     }else {
         return(x)
     }
