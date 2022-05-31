@@ -12,8 +12,12 @@ LazyData: true
 Imports: 
     Rcpp,
     dplyr
+Suggests:
+    knitr,
+    markdown
 LinkingTo: Rcpp
 RoxygenNote: 7.1.2
 URL: https://github.com/YuLab-SMU/UltraPseR
 BugReports: https://github.com/YuLab-SMU/UltraPseR/issues
+VignetteBuilder: knitr
 NeedsCompilation: yes

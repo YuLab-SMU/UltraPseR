@@ -12,7 +12,7 @@
 #' @return a list
 #' @examples
 #' tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
-#' UpseR(input = tiny_sequences, format = "tsv", note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
+#' UpseR(input = tiny_sequences, note = "stdprot", module = "pse", property = "ZIMJ680105")
 #' @export
 
 UpseR <- function(input, format = "tsv", module = "comp", note = "stdprot", property = "ZIMJ680105", w = 0.05, l = 10, t = 1){

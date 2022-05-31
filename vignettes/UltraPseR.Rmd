@@ -7,16 +7,15 @@ output:
     theme: cayman
     highlight: github
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{UltrPseR}
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+  %\usepackage[UTF-8]{inputenc}
 ---
 
 ###  Calculated Component
 
 ```{r message=FALSE}
 library(UltraPseR)
-library(dplyr)
 ```
 
 ```{r}

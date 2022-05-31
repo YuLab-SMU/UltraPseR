@@ -3,5 +3,21 @@ UltraPseR.Rproj
 README.Rmd
 src/LICENSE
 .Rhistory
-*.o
 UltraPseR.html
+# R stuff
+*.RData
+*.Rda
+*.Rdat
+*.rda
+*.rdat
+*.Rhistory
+*.Rcheck
+
+# Compiled Object files
+*.o
+
+# Compiled Dynamic libraries
+*.so
+
+# Executables
+*.out
