@@ -23,7 +23,7 @@ The development version from github:
 ```{r eval=F}
 if (!requireNamespace("devtools", quietly=TRUE))
     install.packages("devtools")
-devtools::install_github("nyzhoulang/UltraPseR")
+devtools::install_github("YuLab-SMU/UltraPseR")
 ```
 
 ##  Quick Example 
@@ -36,7 +36,7 @@ library(dplyr)
 
 ```{r}
 tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
-x <- UltraPseR::UpseR(input = tiny_sequences, format = "tsv", module = "comp", note = "stdprot") 
+x <- UltraPseR::UpseR(input = tiny_sequences, module = "comp", note = "stdprot") 
 x
 ```
 
@@ -44,14 +44,14 @@ x
 
 ```{r }
 tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
-UltraPseR::UpseR(input = tiny_sequences, format = "tsv", note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
+UltraPseR::UpseR(input = tiny_sequences, note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
 ```
 
 ###  Pse-DiDNA
 
 ```{r }
 DNA_sequences <- system.file("extdata", "tiny-dna.fas", package = "UltraPseR")
-UltraPseR::UpseR(input = DNA_sequences, format = "tsv", note = "didna", module = "pse", property = "DD0033", w = 0.05, l = 3, t = 1)
+UltraPseR::UpseR(input = DNA_sequences, note = "didna", module = "pse", property = "DD0033", w = 0.05, l = 3, t = 1)
 ```
 
 ###  Explore proprety

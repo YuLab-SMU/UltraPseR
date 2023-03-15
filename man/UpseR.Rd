@@ -6,7 +6,6 @@
 \usage{
 UpseR(
   input,
-  format = "tsv",
   module = "comp",
   note = "stdprot",
   property = "ZIMJ680105",
@@ -17,8 +16,6 @@ UpseR(
 }
 \arguments{
 \item{input}{A FASTA format file for input. The comment line of a sequence in this file should be unique. If you do not specify an in-file, the program will try to read it from keyboard.}
-
-\item{format}{Output format.{svm|tsv|csv}}
 
 \item{module}{Representation module choices. This option can appear for multiple times.{comp|pse|dpc|cov|lua|pseb3|user,LIB_OBJECT,MOD_NAME}}
 
@@ -33,7 +30,7 @@ UpseR(
 \item{t}{Type, a mode specific option. Type parameter in the pse / cov module. This option can have user defined purpose.}
 }
 \value{
-a list
+a data.frame
 }
 \description{
 wappers UltraPse in R
