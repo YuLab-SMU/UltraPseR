@@ -1,7 +1,7 @@
 Package: UltraPseR
 Type: Package
-Title: An R package for biological sequence representations
-Version: 0.1.6
+Title: Biological sequence representations
+Version: 0.1.7
 Author: c(person("Lang", "Zhou",      email = "nyzhoulang@gmail.com",    role = c("aut", "cre")),
           person("Guangchuang", "Yu", email = "guangchuangyu@gmail.com", role = c("aut", "ths"), comment = c(ORCID = "0000-0002-6485-8781")),
 Maintainer: Lang Zhou <nyzhoulang@gmail.com>
@@ -11,7 +11,12 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     Rcpp,
-    dplyr
+    dplyr,
+    ggplot2,
+    tidyr,
+    ggalt,
+    RColorBrewer,
+    utils
 Suggests:
     knitr,
     markdown

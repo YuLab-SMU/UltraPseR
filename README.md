@@ -33,6 +33,17 @@ library(dplyr)
 ``` r
 tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
 x <- UltraPseR::UpseR(input = tiny_sequences, module = "comp", note = "stdprot") 
+```
+
+    ## Registered S3 methods overwritten by 'ggalt':
+    ##   method                  from   
+    ##   grid.draw.absoluteGrob  ggplot2
+    ##   grobHeight.absoluteGrob ggplot2
+    ##   grobWidth.absoluteGrob  ggplot2
+    ##   grobX.absoluteGrob      ggplot2
+    ##   grobY.absoluteGrob      ggplot2
+
+``` r
 x
 ```
 
@@ -57,76 +68,28 @@ x
     ## 18       3.448       2.542
     ## 19       0.862       0.000
     ## 20       3.448       5.085
-    ## 21       (nil)       (nil)
 
 ### Pse-Protein
 
 ``` r
 tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
-UltraPseR::UpseR(input = tiny_sequences, note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
+pro <- UltraPseR::UpseR(input = tiny_sequences, note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
+p <- UltraPseR::plot_upse(pro)
+p
 ```
 
-    ##    043L_IIV6|0 094L_IIV6|0
-    ## 1        0.000       1.719
-    ## 2        4.341       3.438
-    ## 3        7.813       3.438
-    ## 4        7.813       5.157
-    ## 5        5.209       3.438
-    ## 6        3.473       3.438
-    ## 7        0.000       2.578
-    ## 8       14.759      12.033
-    ## 9       13.022      11.173
-    ## 10      10.418       9.454
-    ## 11       2.604       4.297
-    ## 12      13.891      14.611
-    ## 13       1.736       0.859
-    ## 14       1.736       2.578
-    ## 15       0.868       1.719
-    ## 16       2.604       7.735
-    ## 17       2.604       6.016
-    ## 18       3.473       2.578
-    ## 19       0.868       0.000
-    ## 20       3.473       5.157
-    ## 21      -1.019      -0.069
-    ## 22       0.895      -0.060
-    ## 23      -1.150      -0.371
-    ## 24       0.711       0.179
-    ## 25      -0.812      -0.013
-    ## 26       0.017       0.281
-    ## 27      -0.184      -0.213
-    ## 28       0.547      -0.598
-    ## 29       0.148      -0.163
-    ## 30       0.140      -0.391
-    ## 31       (nil)       (nil)
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ### Pse-DiDNA
 
 ``` r
 DNA_sequences <- system.file("extdata", "tiny-dna.fas", package = "UltraPseR")
-UltraPseR::UpseR(input = DNA_sequences, note = "didna", module = "pse", property = "DD0033", w = 0.05, l = 3, t = 1)
+dna_res <-UltraPseR::UpseR(input = DNA_sequences, note = "didna", module = "pse", property = "DD0033", w = 0.05, l = 3, t = 1)
+p1 <- UltraPseR::plot_upse(dna_res)
+p1
 ```
 
-    ##    Example1 Example2
-    ## 1     0.000    0.000
-    ## 2     8.216    8.216
-    ## 3     8.216    8.216
-    ## 4     8.216    8.216
-    ## 5     8.216    8.216
-    ## 6     0.000    0.000
-    ## 7     0.000    0.000
-    ## 8     0.000    0.000
-    ## 9     8.216    8.216
-    ## 10    0.000    0.000
-    ## 11    0.000    0.000
-    ## 12    8.216    8.216
-    ## 13    4.108    4.108
-    ## 14    4.108    4.108
-    ## 15    8.216    8.216
-    ## 16    4.108    4.108
-    ## 17   11.690   11.690
-    ## 18   11.220   11.220
-    ## 19    7.251    7.251
-    ## 20    (nil)    (nil)
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ### Explore proprety
 

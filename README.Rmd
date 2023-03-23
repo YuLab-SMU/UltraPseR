@@ -42,16 +42,20 @@ x
 
 ###  Pse-Protein
 
-```{r }
+```{r fig.height = 2.5, fig.width = 11, message=FALSE, warning=FALSE, dpi=300}
 tiny_sequences <- system.file("extdata", "tiny.fas", package = "UltraPseR")
-UltraPseR::UpseR(input = tiny_sequences, note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
+pro <- UltraPseR::UpseR(input = tiny_sequences, note = "stdprot", module = "pse", property = "ZIMJ680105", w = 0.05, l = 10, t = 2)
+p <- UltraPseR::plot_upse(pro)
+p
 ```
 
 ###  Pse-DiDNA
 
-```{r }
+```{r fig.height = 2.5, fig.width = 11, message=FALSE, warning=FALSE, dpi=300}
 DNA_sequences <- system.file("extdata", "tiny-dna.fas", package = "UltraPseR")
-UltraPseR::UpseR(input = DNA_sequences, note = "didna", module = "pse", property = "DD0033", w = 0.05, l = 3, t = 1)
+dna_res <-UltraPseR::UpseR(input = DNA_sequences, note = "didna", module = "pse", property = "DD0033", w = 0.05, l = 3, t = 1)
+p1 <- UltraPseR::plot_upse(dna_res)
+p1
 ```
 
 ###  Explore proprety

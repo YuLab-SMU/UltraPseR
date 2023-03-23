@@ -36,6 +36,8 @@ UpseR <- function(input, module = "comp", note = "stdprot", property = "ZIMJ6801
         return(df)
     })  %>% do.call(cbind,.)
     
+    y <- y[-nrow(y),] #remove null
+    y[] <- lapply(y, as.numeric)
     return(y)
     # if( format == "tsv") {
     #     #lapply(seq(length(x)), function(i) {
